@@ -507,3 +507,9 @@ body {
     .profile__link:hover, .profile__link:focus, .profile__link:active {
       background-color: #fc0;
       color: #fff; }
+  .profile__text:after {
+    content: '';
+    width: 20%;
+    border-bottom: 4px solid #fc0;
+    display: block;
+    margin: 24px auto; }
