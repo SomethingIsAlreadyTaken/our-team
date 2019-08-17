@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500%7CRoboto:700,900&display=swap');
 
 @import 'normalize';
+@import 'slick';
 
 
 $brand-color: #fc0;
@@ -91,6 +92,7 @@ body {
 		border: none;
 		outline:none;
 		opacity: .4;
+		z-index: 1;
 		@include tr(opacity);
 		&--next {
 			right: 0;
@@ -112,25 +114,29 @@ body {
 		li {
 			display: inline-block;
 		}
-	}
-	&__dot {
-		border: 1px solid $brand-color;
-		background-color: $brand-color;
-		width: 12px;
-		height: 12px;
-		display: inline-block;
-		padding: 0;
-		border-radius: 50%;
-		outline: none;
-		@include tr(background-color);
-		&:hover,
-		&:focus,
-		&:active,
-		&--active {
+		button {
+			font-size: 0;
+			border: 1px solid $brand-color;
+			background-color: $brand-color;
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			padding: 0;
+			border-radius: 50%;
+			outline: none;
+			margin: 5px;
+			@include tr(background-color);
+			&:hover,
+			&:focus,
+			&:active,
+			&--active {
+				background-color: #fff;
+			}
+		}
+		.slick-active button {
 			background-color: #fff;
 		}
 	}
-
 }
 
 .profile {
@@ -141,6 +147,7 @@ body {
 		width: 50%;
 		padding: 8%;
 		display: inline-block;
+		vertical-align: middle;
 		&:first-child {
 		border-right: 1px solid $brand-color;
 		}
